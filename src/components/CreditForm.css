@@ -1,0 +1,167 @@
+.credit {
+    padding: 100px 0;
+    background: var(--dark-2);
+}
+
+.credit__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+.credit__header {
+    max-width: 640px;
+}
+
+.credit__card {
+    background: var(--dark-3);
+    border: 1px solid rgba(201, 168, 76, 0.2);
+    border-radius: var(--radius-lg);
+    padding: 40px 48px;
+    box-shadow: var(--shadow), var(--shadow-gold);
+    position: relative;
+    overflow: hidden;
+}
+
+.credit__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--gold-light), var(--gold));
+}
+
+.credit__card-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(37, 211, 102, 0.1);
+    border: 1px solid rgba(37, 211, 102, 0.25);
+    color: #4ade80;
+    font-size: 0.82rem;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 99px;
+    margin-bottom: 28px;
+}
+
+.credit__form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.credit__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.credit__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.credit__field label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.75);
+    letter-spacing: 0.02em;
+}
+
+.credit__field input,
+.credit__field select {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: var(--radius);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    padding: 13px 16px;
+    outline: none;
+    transition: var(--transition);
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.credit__field input::placeholder {
+    color: var(--text-muted);
+}
+
+.credit__field input:focus,
+.credit__field select:focus {
+    border-color: var(--gold);
+    background: rgba(201, 168, 76, 0.07);
+    box-shadow: 0 0 0 3px rgba(201, 168, 76, 0.12);
+}
+
+.credit__field select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239A9A9A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+}
+
+.credit__field select option {
+    background: var(--dark-3);
+    color: var(--white);
+}
+
+.credit__privacy {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    padding: 12px 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: var(--radius);
+    border-left: 3px solid rgba(201, 168, 76, 0.4);
+}
+
+.credit__submit {
+    font-size: 1.05rem !important;
+    padding: 16px 32px !important;
+    align-self: flex-start;
+    margin-top: 4px;
+}
+
+.credit__success {
+    text-align: center;
+    padding: 80px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.credit__success-icon {
+    font-size: 4rem;
+}
+
+.credit__success h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--white);
+}
+
+.credit__success p {
+    color: var(--text-muted);
+    max-width: 400px;
+}
+
+@media (max-width: 700px) {
+    .credit__card {
+        padding: 28px 20px;
+    }
+
+    .credit__row {
+        grid-template-columns: 1fr;
+    }
+
+    .credit__submit {
+        align-self: stretch;
+        justify-content: center;
+    }
+}

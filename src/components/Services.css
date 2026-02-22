@@ -1,0 +1,113 @@
+.services {
+    padding: 100px 0;
+    background: var(--dark);
+}
+
+.services__header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 56px;
+}
+
+.services__header .gold-line {
+    margin: 0 auto 16px;
+}
+
+.services__header .section-subtitle {
+    text-align: center;
+    margin: 12px auto 0;
+}
+
+.services__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.services__card {
+    position: relative;
+    padding: 32px 28px;
+    background: var(--dark-2);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: var(--radius-lg);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: hidden;
+}
+
+.services__card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.4), transparent);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.services__card:hover {
+    border-color: rgba(201, 168, 76, 0.25);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.services__card:hover::before {
+    opacity: 1;
+}
+
+.services__card--highlight {
+    background: linear-gradient(145deg, rgba(201, 168, 76, 0.1) 0%, var(--dark-2) 100%);
+    border-color: rgba(201, 168, 76, 0.35) !important;
+    box-shadow: var(--shadow-gold);
+}
+
+.services__card--highlight::before {
+    opacity: 1 !important;
+}
+
+.services__card-icon {
+    font-size: 2rem;
+}
+
+.services__card-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--white);
+}
+
+.services__card-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    flex: 1;
+}
+
+.services__card-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--gold), var(--gold-light));
+    color: var(--dark);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 99px;
+    letter-spacing: 0.04em;
+    width: fit-content;
+}
+
+@media (max-width: 1000px) {
+    .services__grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .services__grid {
+        grid-template-columns: 1fr;
+    }
+}
