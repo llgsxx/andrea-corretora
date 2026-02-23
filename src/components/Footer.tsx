@@ -55,7 +55,6 @@ export const Footer: React.FC = () => {
                         <h4>Contato</h4>
                         <ul>
                             <li>📍 {BROKER.city}</li>
-                            <li>📧 {BROKER.email}</li>
                             <li>
                                 <a href={waLink} target="_blank" rel="noopener noreferrer">
                                     📱 WhatsApp
