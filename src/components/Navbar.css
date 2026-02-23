@@ -13,7 +13,14 @@
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(201, 168, 76, 0.15);
-    padding: 12px 0;
+    padding: 8px 0;
+    /* Mais apertado no scroll */
+}
+
+.navbar--scrolled .navbar__logo-img {
+    height: 60px;
+    /* Logo diminui ao scrolar para não esticar a barra */
+    margin: 0;
 }
 
 .navbar__inner {
@@ -34,24 +41,21 @@
 }
 
 .navbar__logo-img {
-    height: 48px;
-    /* Ajuste para o tamanho ideal da logo */
+    height: 120px;
+    /* Sensivelmente maior */
     width: auto;
     object-fit: contain;
+    margin-top: -10px;
+    margin-bottom: -10px;
 }
 
 .navbar__logo-text {
     font-size: 1.1rem;
     color: var(--gold);
     display: none;
-    /* Escondendo o texto já que a logo deve conter a marca, ou ajuste se preferir manter ambos */
+    /* Removido para dar foco total na logo grande */
 }
 
-@media (min-width: 900px) {
-    .navbar__logo-text {
-        display: block;
-    }
-}
 
 .navbar__links {
     display: flex;
