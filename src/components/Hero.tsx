@@ -24,7 +24,7 @@ export const Hero: React.FC = () => {
             <div className="container hero__content">
                 <div className="hero__badge animate-fade-up">
                     <span className="hero__badge-dot" />
-                    Atendimento personalizado e gratuito
+                    Atendimento exclusivo e personalizado
                 </div>
                 <h1 className="section-title hero__title animate-fade-up-delay-1">
                     Conquiste seu <span>imóvel dos sonhos</span>
