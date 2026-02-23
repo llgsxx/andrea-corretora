@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { BROKER } from '../constants';
+import logoImg from '../assets/WhatsApp_Image_2026-02-22_at_21.28.31-removebg-preview.png';
 import './Navbar.css';
 
 const WhatsAppIcon = () => (
@@ -31,7 +32,7 @@ export const Navbar: React.FC = () => {
         <nav className={`navbar ${scrolled ? 'navbar--scrolled' : ''}`}>
             <div className="container navbar__inner">
                 <a href="#hero" className="navbar__logo">
-                    <span className="navbar__logo-icon">🏠</span>
+                    <img src={logoImg} alt={BROKER.name} className="navbar__logo-img" />
                     <span className="navbar__logo-text">{BROKER.name}</span>
                 </a>
 

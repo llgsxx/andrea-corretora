@@ -1,5 +1,6 @@
 import React from 'react';
 import { BROKER } from '../constants';
+import logoImg from '../assets/WhatsApp_Image_2026-02-22_at_21.28.31-removebg-preview.png';
 import './Footer.css';
 
 const WhatsAppIcon = () => (
@@ -25,7 +26,7 @@ export const Footer: React.FC = () => {
                 <div className="container footer__cta-inner">
                     <div>
                         <h3 className="footer__cta-title">Pronto para conquistar seu imóvel?</h3>
-                        <p className="footer__cta-sub">Fale agora com {BROKER.brokerName} e dê o primeiro passo.</p>
+                        <p className="footer__cta-sub">Fale agora com a <strong>{BROKER.codename}</strong> e dê o primeiro passo.</p>
                     </div>
                     <a href={waLink} target="_blank" rel="noopener noreferrer" className="btn-wa footer__cta-btn">
                         <WhatsAppIcon /> Falar no WhatsApp
@@ -35,7 +36,10 @@ export const Footer: React.FC = () => {
             <div className="footer__main">
                 <div className="container footer__grid">
                     <div className="footer__brand">
-                        <div className="footer__logo">🏠 {BROKER.name}</div>
+                        <div className="footer__logo">
+                            <img src={logoImg} alt={BROKER.name} className="footer__logo-img" />
+                            {BROKER.name}
+                        </div>
                         <p className="footer__brand-desc">{BROKER.description}</p>
                         <span className="footer__creci">{BROKER.creci}</span>
                     </div>

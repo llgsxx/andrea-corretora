@@ -12,6 +12,7 @@ interface FormData {
     valorImovel: string;
     tipoImovel: string;
     temFGTS: string;
+    regiao: string;
 }
 
 // ── Masks ─────────────────────────────────────────────────────────────────────
@@ -43,6 +44,7 @@ const buildWAMessage = (data: FormData) => {
         `📋 *CPF:* ${data.cpf}`,
         `📱 *Telefone:* ${data.telefone}`,
         `📧 *E-mail:* ${data.email}`,
+        `📍 *Região de Interesse:* ${data.regiao}`,
         `💵 *Renda Mensal:* ${data.renda}`,
         `🏡 *Valor do Imóvel:* ${data.valorImovel}`,
         `🏗️ *Tipo de Imóvel:* ${data.tipoImovel}`,
@@ -62,7 +64,7 @@ const SendIcon = () => (
 
 const INITIAL: FormData = {
     nome: '', cpf: '', telefone: '', email: '',
-    renda: '', valorImovel: '', tipoImovel: '', temFGTS: '',
+    renda: '', valorImovel: '', tipoImovel: '', temFGTS: '', regiao: '',
 };
 
 export const CreditForm: React.FC = () => {
@@ -111,7 +113,7 @@ export const CreditForm: React.FC = () => {
                 <div className="credit__header">
                     <div className="gold-line" />
                     <h2 className="section-title">
-                        Análise de <span>Crédito Grátis</span>
+                        Análise de <span>Crédito Gratuita</span>
                     </h2>
                     <p className="section-subtitle">
                         Preencha o formulário abaixo e receba uma análise rápida da sua capacidade de
@@ -148,19 +150,34 @@ export const CreditForm: React.FC = () => {
                                 <input id="email" name="email" type="email" placeholder="joao@email.com" value={form.email} onChange={handle} />
                             </div>
                         </div>
+
                         {/* Row 3 */}
                         <div className="credit__row">
+                            <div className="credit__field">
+                                <label htmlFor="regiao">Região de Busca (apenas SP) *</label>
+                                <select id="regiao" name="regiao" required value={form.regiao} onChange={handle}>
+                                    <option value="">Selecione a região...</option>
+                                    <option value="São Paulo - Zona Sul">São Paulo - Zona Sul</option>
+                                    <option value="São Paulo - Zona Leste">São Paulo - Zona Leste</option>
+                                    <option value="São Paulo - Zona Oeste">São Paulo - Zona Oeste</option>
+                                    <option value="São Paulo - Zona Norte">São Paulo - Zona Norte</option>
+                                    <option value="São Paulo - Centro">São Paulo - Centro</option>
+                                    <option value="ABCD / Grande SP">ABCD / Grande SP</option>
+                                    <option value="Outras regiões de SP">Outras regiões de SP</option>
+                                </select>
+                            </div>
                             <div className="credit__field">
                                 <label htmlFor="renda">Renda mensal bruta *</label>
                                 <input id="renda" name="renda" type="text" inputMode="numeric" placeholder="R$ 5.000,00" required value={form.renda} onChange={handle} />
                             </div>
+                        </div>
+
+                        {/* Row 4 */}
+                        <div className="credit__row">
                             <div className="credit__field">
                                 <label htmlFor="valorImovel">Valor do imóvel desejado *</label>
                                 <input id="valorImovel" name="valorImovel" type="text" inputMode="numeric" placeholder="R$ 300.000,00" required value={form.valorImovel} onChange={handle} />
                             </div>
-                        </div>
-                        {/* Row 4 */}
-                        <div className="credit__row">
                             <div className="credit__field">
                                 <label htmlFor="tipoImovel">Tipo de imóvel *</label>
                                 <select id="tipoImovel" name="tipoImovel" required value={form.tipoImovel} onChange={handle}>
@@ -172,6 +189,10 @@ export const CreditForm: React.FC = () => {
                                     <option value="Na Planta">Na Planta / Lançamento</option>
                                 </select>
                             </div>
+                        </div>
+
+                        {/* Row 5 */}
+                        <div className="credit__row">
                             <div className="credit__field">
                                 <label htmlFor="temFGTS">Possui FGTS para uso? *</label>
                                 <select id="temFGTS" name="temFGTS" required value={form.temFGTS} onChange={handle}>

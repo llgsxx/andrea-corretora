@@ -45,6 +45,15 @@
     color: var(--gold);
     font-weight: 700;
     margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer__logo-img {
+    height: 32px;
+    width: auto;
+    object-fit: contain;
 }
 
 .footer__brand-desc {

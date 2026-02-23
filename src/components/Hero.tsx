@@ -38,25 +38,10 @@ export const Hero: React.FC = () => {
                         <WhatsAppIcon /> Falar no WhatsApp
                     </a>
                     <a href="#credito" className="btn-gold">
-                        Análise de Crédito Grátis
+                        Análise de Crédito Gratuita
                     </a>
                 </div>
-                <div className="hero__stats animate-fade-up-delay-3">
-                    <div className="hero__stat">
-                        <span className="hero__stat-number">10+</span>
-                        <span className="hero__stat-label">Anos de experiência</span>
-                    </div>
-                    <div className="hero__stat-divider" />
-                    <div className="hero__stat">
-                        <span className="hero__stat-number">500+</span>
-                        <span className="hero__stat-label">Famílias realizadas</span>
-                    </div>
-                    <div className="hero__stat-divider" />
-                    <div className="hero__stat">
-                        <span className="hero__stat-number">98%</span>
-                        <span className="hero__stat-label">Taxa de aprovação</span>
-                    </div>
-                </div>
+
             </div>
 
             <a href="#sobre" className="hero__scroll-hint">

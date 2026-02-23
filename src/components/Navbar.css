@@ -33,12 +33,24 @@
     color: var(--white);
 }
 
-.navbar__logo-icon {
-    font-size: 1.4rem;
+.navbar__logo-img {
+    height: 48px;
+    /* Ajuste para o tamanho ideal da logo */
+    width: auto;
+    object-fit: contain;
 }
 
 .navbar__logo-text {
+    font-size: 1.1rem;
     color: var(--gold);
+    display: none;
+    /* Escondendo o texto já que a logo deve conter a marca, ou ajuste se preferir manter ambos */
+}
+
+@media (min-width: 900px) {
+    .navbar__logo-text {
+        display: block;
+    }
 }
 
 .navbar__links {

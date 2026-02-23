@@ -2,13 +2,14 @@
 // Substitua pelas informações reais da corretora
 
 export const BROKER = {
-  name: 'Andrea Imóveis',
-  brokerName: 'Andrea Silva',
+  name: 'Andrea Antonini — Taiger',
+  brokerName: 'Andrea Antonini',
+  codename: 'Corretora Taiger',
   creci: 'CRECI-SP 98765-F',
-  whatsappNumber: '5511999999999', // ← Trocar pelo número real (só dígitos)
-  tagline: 'Realizando o sonho do seu imóvel com segurança e credibilidade',
+  whatsappNumber: '5511978869362', // ← Trocar pelo número real (só dígitos)
+  tagline: 'Realizando o sonho do seu imóvel com a garra e segurança da Taiger',
   description:
-    'Especialista em financiamento imobiliário, com mais de 10 anos de experiência ajudando famílias a conquistarem a casa própria. Atendimento personalizado e análise de crédito gratuita.',
+    'Consultora imobiliária dedicada a ajudar pessoas a conquistar a casa própria com segurança, agilidade e planejamento estratégico. Atendimento personalizado, orientação clara e acompanhamento completo do início à entrega das chaves',
   instagram: 'https://instagram.com/',
   email: 'contato@andreaimoveis.com.br',
   city: 'São Paulo — SP',
