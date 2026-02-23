@@ -5,7 +5,7 @@ export const BROKER = {
   name: 'Andrea Antonini — Taiger',
   brokerName: 'Andrea Antonini',
   codename: 'Corretora Taiger',
-  creci: 'CRECI-SP 318554-F',
+  creci: 'CRECI-SP 318554',
   whatsappNumber: '5511978869362', // ← Trocar pelo número real (só dígitos)
   tagline: 'Realizando o sonho do seu imóvel com a garra e segurança da Taiger',
   description:
